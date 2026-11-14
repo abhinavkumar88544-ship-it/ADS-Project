@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><title>SortLab - Sorting Algorithm Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="style.css"></head>
+<body>
+<aside>
+  <div class="logo"><span></span><h1>SortLab</h1></div>
+  <p class="sub">Sorting algorithm dashboard</p>
+  <div class="ctl"><label for="size">Array size</label><input id="size" type="number" min="10" max="100" value="40"></div>
+  <div class="ctl"><label for="speed">Speed</label><input id="speed" type="range" min="1" max="100" value="60"></div>
+  <button id="gen">New array</button>
+  <button id="run">Run all</button>
+  <button id="reset">Reset</button>
+  <div class="legend">
+    <p><i style="background:#fbbf24"></i>Comparing</p>
+    <p><i style="background:#f43f5e"></i>Swapping</p>
+    <p><i style="background:#34d399"></i>Sorted</p>
+  </div>
+  <p class="hint">All four algorithms sort an identical copy of the array.</p>
+</aside>
+<main>
+  <section class="panel"><h2>Input array</h2><canvas id="orig"></canvas></section>
+  <section class="grid" id="grid"></section>
+  <section class="cmp">
+    <div><h2>Results</h2>
+      <table><thead><tr><th>Algorithm</th><th>Time (ms)</th><th>Comparisons</th><th>Swaps</th><th>Complexity</th></tr></thead><tbody id="tb"></tbody></table></div>
+    <div><h2>Execution time (ms)</h2><canvas id="chart"></canvas></div>
+  </section>
+</main>
+<script src="script.js"></script>
+</body></html>
